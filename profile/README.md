@@ -2,28 +2,36 @@
 
 # Wang Builds · 阿王写工具
 
-**拒绝包年订阅刺客，做纯粹好用的本地优先开源小工具**
+**拒绝臃肿环境与订阅绑架，专注纯原生、本地优先的硬核开源工具**
 
-*Local-first, zero-subscription, browser-native micro-tools built with zero bloat.*
+*Native, local-first, zero-subscription open-source developer & creator tools.*
 
 [![GitHub Org](https://img.shields.io/badge/GitHub-wang--builds-0f172a?style=for-the-badge&logo=github)](https://github.com/wang-builds)
-[![License: MIT](https://img.shields.io/badge/Open_Source-MIT-10b981?style=for-the-badge)](#精选开源工具)
+[![Homebrew Tap](https://img.shields.io/badge/Homebrew-wang--builds%2Ftap-fbb040?style=for-the-badge&logo=homebrew&logoColor=white)](https://github.com/wang-builds/homebrew-tap)
+[![License: MIT](https://img.shields.io/badge/Open_Source-MIT-10b981?style=for-the-badge)](https://github.com/wang-builds/cutword)
 
 </div>
 
 ---
 
-## 精选开源工具
+## 旗舰开源项目
 
-| 项目 | 一句话解决什么痛点 | 核心亮点 | 在线试玩 / 源码 |
-|---|---|---|---|
-| **净卷宝 PaperClean** | 拍试卷满篇红叉手写与台灯阴影，打印没地方写题 | `32×32` 分块漂白 + HSV 抹除红蓝铅笔 + 填空加宽留白 + 零重叠 A4 AirPrint 打印 | [在线试玩](https://wang-builds.github.io/paper-clean/) · [GitHub](https://github.com/wang-builds/paper-clean) |
-| **灵动提词 IslandPrompter** | 拍口播眼神乱飘、切原相机看不见词、提词软件高价包月 | 顶部前摄 `60px` 锁眼 + Canvas `30fps` 真画中画跨 App 悬浮 + 本地语音停顿锁死/跳读对齐 | [在线试玩](https://wang-builds.github.io/island-prompter/) · [GitHub](https://github.com/wang-builds/island-prompter) |
+### ✂️ [CutWord · 剪字](https://github.com/wang-builds/cutword) — 像删 Word 文档一样剪口播视频（macOS Apple Silicon 原生）
+
+- **极致轻量离线**：纯 Swift 6.2 调用系统内置 `SpeechAnalyzer` + `AVFoundation` + `VideoToolbox`，**整个 `.dmg` 仅 `2.2 MB`**，0 Python、0 模型下载、0 API Key、断网即用。
+- **声学 + 语义自动精剪**：16kHz PCM 扫描切除冷场气口（保留 `120ms` 自然呼吸留白 + `8ms` 防爆音淡入淡出），自动划除 `嗯/啊/那个/就是说` 口癖与「说错半句……不对重来……」NG 重录废句。
+- **三路零门槛导出**：一键直出 **逐字金色高亮胶囊字幕 MP4**、**纯净 MP4 + 校准 `.srt`（直拖免费版剪映 0 元套花字）** 或 **Final Cut Pro / 达芬奇 `FCPXML v1.10`**，内置 `cutword` 命令行与 AI Agent Skill。
+
+```bash
+brew install --cask --no-quarantine wang-builds/tap/cutword
+```
+
+👉 [**前往仓库查看演示与源码**](https://github.com/wang-builds/cutword) · [**直接下载 2.2 MB `.dmg` 安装包**](https://github.com/wang-builds/cutword/releases/latest)
 
 ---
 
-## 我们的三个开发原则
+## 我们的三个工程原则
 
-1. **100% 本地优先（Local-First）**：所有图像处理、语音识别与数据运算尽量留在用户的浏览器本地完成，不强制登录、不传隐私文件上云。
-2. **零依赖、零订阅绑架**：拒绝开屏摇一摇广告，拒绝把简单工具做成包年扣费陷阱；所有核心工具点开网页即用，也可直接 PWA 添加到手机桌面离线运行。
-3. **欢迎测评与二创传播**：欢迎 **抖音、B站、小红书、YouTube** 创作者自由录屏演示或基于 MIT 协议二次开发！有好点子或痛点需求欢迎在对应仓库提 Issue。
+1. **100% 本地优先（On-Device First）**：音视频与隐私数据全程留在本机芯片处理，不强制注册、不上传云端。
+2. **零环境负担、零订阅刺客**：能用系统原生算力 `2 MB` 解决的事，绝不让用户装 `3 GB` 依赖或按月付费解锁基础功能。
+3. **欢迎实测与二创分享**：所有公开项目均采用 MIT 协议，内置开箱实测样片，欢迎 **B站、抖音、小红书、YouTube** 创作者自由录屏评测或提 Issue 共建。
